@@ -18,6 +18,8 @@ typedef struct {
     int window_width;
     int window_height;
     int pixel_size;
+
+    int play_game;                    //MOD
     GameState game_state;
 
     Si *si;
@@ -29,8 +31,9 @@ typedef struct {
     char update;
 } Game;
 
-Game *game_new(void);
+Game *game_new(int x, int y);            //MOD
 void game_del(Game *g);
 void game_run(Game *g);
+
 
 #endif
